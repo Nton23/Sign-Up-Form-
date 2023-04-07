@@ -34,7 +34,7 @@
                     </blockquote>
                 </div>
                 <div id="middle-right-side-container">
-                    <form action="example.com/path" method="post">
+                    <form action="example.com/path" method="post" id="my-form">
                         <div id="form-h1"><h1>Let's do this!</h1></div>
                         <ul>
                             <li>
@@ -63,8 +63,8 @@
                                     <input type="password" id="password" placeholder="Your password here" required>
                                 </div>
                                 <div>
-                                    <label for="password-conformation">Confirm Password</label>
-                                    <input type="password" id="password-conformation" placeholder="Please confirm your password" required>
+                                    <label for="password-confirmation">Confirm Password</label>
+                                    <input type="password" id="password-confirmation" placeholder="Please confirm your password" required>
                                 </div>
                             </li>
                         </ul>
@@ -81,7 +81,32 @@
             </div>
         </div>
     </main>
-    <script></script>
+    <script>
+        //create variable value for password and password confirmation
+        const password = document.getElementById("password");
+        let passwordValue = '';
+        let passwordConfirmationValue = '';
+        password.addEventListener ("input", (e) => {
+            passwordValue = e.target.value;
+        }
+        )
+        const passwordConfirmation = document.getElementById("password-confirmation");
+        passwordConfirmation.addEventListener ("input", (e) => {
+            passwordConfirmationValue = e.target.value;
+        }
+        )
+        //create a variable for submit button
+        const myForm = document.getElementById("my-form");
+        myForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            console.log("Form submitted"); // add this line
+            if (passwordValue != passwordConfirmationValue) {
+                alert("Password doesnt match")
+            } else {
+                alert("Passwords Match")
+            }
+        });
+    </script>
 </body>
 
 </html>
