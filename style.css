@@ -96,7 +96,6 @@ p#photo-credit {
 }
 
 #p-container {
-    border: solid black;
     width: 90%;
 }
 
@@ -120,10 +119,9 @@ p#photo-credit {
 }
 
 #form-h1 {
-    border: solid black;
-
     display: flex;
     margin-left: 30px;
+    color: rgba(255, 235, 59, 0.8);
 }
 
 ul {
@@ -135,6 +133,8 @@ ul {
 }
 
 li {
+    color: rgba(255, 235, 59, 0.8);
+
     display: flex;
     justify-content: space-evenly;
 }
@@ -146,4 +146,17 @@ label {
 input {
     width: 100%;
     height: 30px;
+}
+
+#submit-bttn-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+#submit-bttn {
+    font-weight: bold;
+    background-color: rgb(61, 81, 181);
+    color: rgba(255, 235, 59, 0.8);
+    width: 50%;
 }
