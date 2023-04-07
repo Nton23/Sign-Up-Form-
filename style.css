@@ -160,3 +160,16 @@ input {
     color: rgba(255, 235, 59, 0.8);
     width: 50%;
 }
+#submit-bttn:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+a{
+    color: rgba(255, 235, 59, 0.8);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
